@@ -5,15 +5,15 @@ from prediction import pred_class
 import numpy as np
 
 # Set title 
-st.title('Microplastic Classification')
+st.title('Prediction of Cardiovascular Disease')
 
 #Set Header 
-st.header('Please up load picture')
+st.header('Please Upload a Chest X-ray Image')
 
 
 #Load Model 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-model = torch.load('mobilenetv3_large_100_checkpoint_fold0.pt', map_location=device)
+model = torch.load('mobilenetv4_conv_aa_large_e230_r384_in12k.pt', map_location=device)
 
 
 
